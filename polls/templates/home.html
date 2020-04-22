@@ -1,0 +1,10 @@
+{% if interviewer_list %}
+    <ul>
+    <h3>面试人员页面</h3>
+    {% for interviewer in interviewer_list %}
+        <li><a href="/polls/interviewer/{{ interviewer.id }}">{{ interviewer.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
